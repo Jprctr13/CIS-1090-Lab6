@@ -11,13 +11,14 @@ let dictionary = [
 //word given in the needle parameter (get it? Searching for a needle in
 //a haystack?).
 //Return true when you find it, and false if you do not.
-function linearSearch(needle, haystack){
-    for(var i = 0; i< dictionary; i++)
-    if (needle[i] == haystack[i]);
-    print = "True";
-
+function linearSearch(needle,haystack){
+    for(let i = 0; i < haystack.length; i++){
+    if(haystack[i] == needle){
+    return true;
+    }
+  }
+    return false;
 }
-
 console.log("Does it contain cat? ", linearSearch("cat", dictionary));
 console.log("Does it contain dog? ", linearSearch("dog", dictionary));
 console.log("Does it contain syzygy? ", linearSearch("syzygy", dictionary));

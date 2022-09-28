@@ -38,10 +38,14 @@ function createIndexForDictionary(d){
 //index to speed up your search.
 //Return true when you find it, and false if you do not.
 function indexSearch(needle, haystack, index){
+        for(let i = 0; i < haystack.length; i++){
+        if(haystack[i] == needle){
+        return true;
+        }
+      }
+        return false;
+    }
 
-    //(your code here)
-
-}
 
 let index = createIndexForDictionary(dictionary);
 console.log(indexSearch("public", dictionary, index));      //Should be true
